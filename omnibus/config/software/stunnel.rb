@@ -56,7 +56,9 @@ build do
 
     mingw = ENV["MSYSTEM"].downcase
     target = (mingw == "mingw32" ? "mingw" : mingw)
-    msys_path = ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"] ? "#{ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"]}/embedded/bin" : "C:/msys2"
+    #msys_path = ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"] ? "#{ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"]}/embedded/bin" : "C:/msys2"
+
+    msys_path = "C:/opscode/omnibus-toolchain/embedded/bin"
 
     make target, env: env, cwd: "#{project_dir}/src"
 
