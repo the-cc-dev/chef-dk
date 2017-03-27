@@ -47,7 +47,7 @@ build do
   ]
   configure_args << "--enable-fips" if fips_mode?
 
-  configure(*configure_args, env: env)
+  command configure_command.join(" "), env: env
 
   if windows?
     # src/mingw.mk hardcodes and assumes SSL is at /opt so we patch and use
@@ -56,9 +56,7 @@ build do
 
     mingw = ENV["MSYSTEM"].downcase
     target = (mingw == "mingw32" ? "mingw" : mingw)
-    #msys_path = ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"] ? "#{ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"]}/embedded/bin" : "C:/msys2"
-
-    msys_path = "C:/opscode/omnibus-toolchain/embedded/bin"
+    msys_path = ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"] ? "#{ENV["OMNIBUS_TOOLCHAIN_INSTALL_DIR"]}/embedded/bin" : "C:/msys2"
 
     make target, env: env, cwd: "#{project_dir}/src"
 
