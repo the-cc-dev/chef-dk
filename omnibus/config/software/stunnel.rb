@@ -40,12 +40,13 @@ build do
 
   patch source: "stunnel-on-windows.patch", plevel: 1, env: env if windows?
 
-  configure_args = [
+  configure_command = [
+    "./configure",
     "--with-ssl=#{install_dir}/embedded",
     "--prefix=#{install_dir}/embedded",
     "verbose=true",
   ]
-  configure_args << "--enable-fips" if fips_mode?
+  configure_command << "--enable-fips" if fips_mode?
 
   command configure_command.join(" "), env: env
 
