@@ -15,10 +15,10 @@ else
 end
 
 dependency "chef-dk"
-# dependency "chef-dk-appbundle"
-#
-# dependency "gem-permissions"
-#
+dependency "chef-dk-appbundle"
+
+dependency "gem-permissions"
+
 # if windows?
 #   dependency "chef-dk-env-customization"
 #   dependency "chef-dk-powershell-scripts"
