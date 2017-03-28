@@ -40,15 +40,14 @@ build do
 
   patch source: "stunnel-on-windows.patch", plevel: 1, env: env if windows?
 
-  configure_command = [
-    "./configure",
+  configure_args = [
     "--with-ssl=#{install_dir}/embedded",
     "--prefix=#{install_dir}/embedded",
     "verbose=true",
   ]
-  configure_command << "--enable-fips" if fips_mode?
+  configure_args << "--enable-fips" if fips_mode?
 
-  command configure_command.join(" "), env: env
+  configure(*configure_args, env: env)
 
   if windows?
     # src/mingw.mk hardcodes and assumes SSL is at /opt so we patch and use
