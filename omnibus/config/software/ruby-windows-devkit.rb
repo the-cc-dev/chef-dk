@@ -38,7 +38,10 @@ else
   end
 end
 build do
-  env = with_standard_compiler_flags(with_embedded_path)
+#  env = with_standard_compiler_flags(with_embedded_path)
+
+  # don't include flags maybe
+  env = with_embedded_path()
 
   embedded_dir = "#{install_dir}/embedded"
 
