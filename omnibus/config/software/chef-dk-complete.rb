@@ -2,11 +2,11 @@ name "chef-dk-complete"
 
 license :project_license
 
-# # For the Delivery build nodes
-# dependency "delivery-cli"
-# # This is a build-time dependency, so we won't leave it behind:
-# dependency "rust-uninstall"
-#
+# For the Delivery build nodes
+dependency "delivery-cli"
+# This is a build-time dependency, so we won't leave it behind:
+dependency "rust-uninstall"
+
 # # Leave for last so system git is used for most of the build.
 # if windows?
 #   dependency "git-windows"
@@ -33,4 +33,4 @@ license :project_license
 # dependency "version-manifest"
 # dependency "openssl-customization"
 
-dependency "stunnel" if fips_mode?
+dependency "stunnel" #if fips_mode?
