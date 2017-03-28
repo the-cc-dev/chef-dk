@@ -19,14 +19,14 @@ dependency "chef-dk-appbundle"
 
 dependency "gem-permissions"
 
-# if windows?
-#   dependency "chef-dk-env-customization"
-#   dependency "chef-dk-powershell-scripts"
-#   # TODO can this be safely moved to before the chef-dk?
-#   # It would make caching better ...
-#   dependency "ruby-windows-devkit"
-# end
-#
+if windows?
+  dependency "chef-dk-env-customization"
+  dependency "chef-dk-powershell-scripts"
+  # TODO can this be safely moved to before the chef-dk?
+  # It would make caching better ...
+  dependency "ruby-windows-devkit"
+end
+
 # dependency "chef-dk-cleanup"
 # dependency "rubygems-customization"
 # dependency "shebang-cleanup"
