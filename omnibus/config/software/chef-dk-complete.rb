@@ -24,7 +24,7 @@ if windows?
   dependency "chef-dk-powershell-scripts"
   # TODO can this be safely moved to before the chef-dk?
   # It would make caching better ...
-  dependency "ruby-windows-devkitz"
+  dependency "ruby-windows-devkit"
 end
 
 dependency "chef-dk-cleanup"

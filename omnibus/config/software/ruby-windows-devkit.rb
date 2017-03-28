@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-name "ruby-windows-devkitz"
+name "ruby-windows-devkit"
 default_version "4.7.2-20130224"
 
 license "BSD-3-Clause"
