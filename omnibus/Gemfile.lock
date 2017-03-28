@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/chef/omnibus.git
-  revision: a6bb35f9d02b48bb9482cac28f3a38bf8feb42d4
+  revision: 2f62f5b09861fb6d1b5d48c2739e82cb7cb5d213
   branch: shain/explicit_bash
   specs:
     omnibus (5.5.0)
