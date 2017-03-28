@@ -14,7 +14,7 @@ else
   dependency "git-custom-bindir"
 end
 
-# dependency "chef-dk"
+dependency "chef-dk"
 # dependency "chef-dk-appbundle"
 #
 # dependency "gem-permissions"
