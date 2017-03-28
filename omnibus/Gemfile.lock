@@ -8,8 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/chef/omnibus.git
-  revision: 59abf5043c680f2a522315c72018d0b4777c716f
-  branch: shain/explicit_bash
+  revision: ced452379e27b85b9958421f258b5fbe22e3760a
   specs:
     omnibus (5.5.0)
       aws-sdk (~> 2)
