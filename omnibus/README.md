@@ -69,8 +69,8 @@ Kitchen-based Build Environment
 -------------------------------
 Every Omnibus project ships will a project-specific
 [Berksfile](http://berkshelf.com/) that will allow you to build your omnibus projects on all of the projects listed
-in the `.kitchen.yml`. You can add/remove additional platforms as needed by
-changing the list found in the `.kitchen.yml` `platforms` YAML stanza.
+in the `kitchen.yml`. You can add/remove additional platforms as needed by
+changing the list found in the `kitchen.yml` `platforms` YAML stanza.
 
 This build environment is designed to get you up-and-running quickly. However,
 there is nothing that restricts you to building on other platforms. Simply use
@@ -82,7 +82,7 @@ development. Test Kitchen also exposes the ability to provision instances using
 various cloud providers like AWS, DigitalOcean, or OpenStack. For more
 information, please see the [Test Kitchen documentation](http://kitchen.ci).
 
-Once you have tweaked your `.kitchen.yml` (or `.kitchen.local.yml`) to your
+Once you have tweaked your `kitchen.yml` (or `.kitchen.local.yml`) to your
 liking, you can bring up an individual build environment using the `kitchen`
 command.
 

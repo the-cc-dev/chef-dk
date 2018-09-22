@@ -71,7 +71,7 @@ template "#{cookbook_dir}/LICENSE" do
 end
 
 # Test Kitchen
-template "#{cookbook_dir}/.kitchen.yml" do
+template "#{cookbook_dir}/kitchen.yml" do
   if context.use_berkshelf
     source 'kitchen.yml.erb'
   else
